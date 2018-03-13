@@ -1,6 +1,6 @@
-# {{ name }}
+# for-scaffolding
 
-> {{ description }}
+> Nuxt.js project
 
 ## Build Setup
 

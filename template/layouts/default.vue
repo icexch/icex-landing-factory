@@ -1,52 +1,129 @@
-<template>
-  <div>
-    <nuxt/>
-  </div>
+<template lang="pug">
+
+  div.layout__container
+    nuxt
+
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+  import { mapState } from 'vuex';
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  export default {
+    head() {
+      return {
+        link: [
+          {
+            rel: 'alternate',
+            href: this.link('ru'),
+            hreflang: 'ru',
+          },
+          {
+            rel: 'alternate',
+            href: this.link('en'),
+            hreflang: 'en',
+          },
+          {
+            rel: 'alternate',
+            href: this.link('ko'),
+            hreflang: 'ko',
+          },
+        ],
+        meta: [
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: 'icex.ch',
+          },
+          {
+            hid: 'og:type',
+            name: 'og:type',
+            content: 'website',
+          },
+          {
+            hid: 'og:image',
+            name: 'og:image',
+            content: `${this.host}/static/img/logo.svg`,
+          },
+          {
+            hid: 'og:url',
+            name: 'og:url',
+            content: `${this.host}/${this.$route.fullPath}`,
+          },
+          {
+            hid: 'og:locale',
+            name: 'og:locale',
+            content: this.localeForMeta,
+          },
+          {
+            hid: 'og:site_name',
+            name: 'og:site_name',
+            content: 'icex.ch',
+          },
+        ],
+      };
+    },
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+    data() {
+      return {
+        host: 'https://app.icex.ch',
+      };
+    },
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+    components: {
+    },
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+    methods: {
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+      link(locale) {
+        const path = this.$route.fullPath.replace(/^.{3}/g, `/${locale}`);
+        return this.host + path;
+      },
+    },
+
+    computed: {
+      ...mapState({
+        locale: state => state.common.locale,
+      }),
+    },
+  };
+
+</script>
+
+<style lang="sass">
+  @import "~assets/sass/vars.sass";
+  @import "~bootstrap/scss/bootstrap.scss";
+
+  .layout__container
+    height: 100vh
+    position: relative
+    padding-top: 3.4rem
+    padding-left: 3.4rem
+    margin: auto
+    transition: 0.3s
+
+    @include media-breakpoint-down(md)
+      padding-left: .4rem
+      padding-right: .4rem
+      padding-top: 3.2rem
+
+    &.__short
+      padding-left: 11.2rem
+      @include media-breakpoint-down(md)
+        padding-left: .4rem
+
+    &.dark
+      color: $athens_gray
+      border: 1px solid $rhino
+      background-color: #181c31
+
+    &.light
+      color: $tangaroa
+      border: 1px solid $mischka
+      background-color: $catskill_white
+
+  .layout__content
+    height: 100%
+    overflow-y: scroll
+    padding-right: .6rem
+
 </style>

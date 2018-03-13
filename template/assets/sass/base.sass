@@ -1,0 +1,62 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./vars.sass";
+
+html
+body
+  background-color: white
+  color: tangaroa
+  -webkit-font-smoothing: antialiased
+  // overflow-x: hidden
+  // overflow-y: auto
+  -webkit-overflow-scrolling: touch;
+
+html
+  font-size: 20px
+  height: 100%
+  @include media-breakpoint-down(sm)
+    font-size: 18px
+  @include media-breakpoint-down(xs)
+    font-size: 16px
+
+body
+  position: relative
+  height: 100%
+  width: 100%
+  font-family: Montserrat, sans-serif
+  font-weight: 400
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+*
+  box-sizing: border-box
+  &:focus
+    outline none
+
+#__nuxt,
+#__layout
+  height: 100%
+
+svg
+  float: left
+
+ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.relative
+  position: relative
+
+.pointer
+  cursor: pointer
+
+.denim
+  color: $denim
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+@import 'page.sass'

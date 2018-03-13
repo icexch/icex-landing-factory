@@ -1,0 +1,409 @@
+{
+  "aside": {
+    "index": "Index",
+    "selectAll": "Select all",
+    "addIndex": "Add index",
+    "coinsIndex": "Coins index",
+    "myIndex": "My index",
+    "news": "News",
+    "doc": "Docs",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+
+  "coin": {
+    "min": "Low",
+    "avg": "Average",
+    "max": "High",
+    "add": "Add coin",
+    "capitalization": "Capitalization",
+    "day_volume": "Day volume",
+    "volume": "Volume",
+    "view": "View",
+    "nodata": "No data",
+    "change": "change"
+  },
+
+  "coins": {
+    "title": "ICEX coins cryptocurrencies indices"
+  },
+
+  "notification": {
+    "index": {
+      "created": "Index {index} is created, now you can replace coins to any available",
+      "pending" : "Index is unpublished",
+      "active": "index is published",
+      "error": {
+        "emptyName": "Index name is empty",
+        "coinsCount": "Coins count must be more or equal 2",
+        "coinValue": "{name} has invalid value"
+      },
+      "coin": {
+        "error": {
+          "exceed": "{name} max sum of coins 100%",
+          "sum": "Sum of all coins must be 100%, сейчас {sum}",
+          "decimal": "Max value .xx",
+          "min": "{name} min value is 1",
+          "empty": "{name} is empty",
+          "negative": "{name} percent can't be negative "
+        }
+      }
+    },
+    "coin": {
+      "replaced": "Added the <b>{new}</b> instead of the <b>{old}</b>",
+      "public": "You can publish your index by clicking the \"Publish\" button"
+    },
+    "auth": {
+      "logout": "You are log out.",
+      "verify": "Please, verify your email address",
+      "unsigned": "Please sign in",
+      "signin" : {
+        "success": "You are signed in to your account",
+        "error": "Sigin in error"
+      },
+      "signup" : {
+        "success": "You are successfully registered",
+        "error": "Sigup in error"
+      }
+    }
+  },
+
+  "index": {
+    "yourIndex": "Your index",
+    "yourCoin": "Your coin",
+    "add": "Add",
+    "price": "Index price:",
+    "noIndex": "No coins",
+    "modal": {
+      "title": "Add Your Index",
+      "shure": "Are your shure?",
+      "desc1": "Name your index, select the coins you want to include and distribute them in your index! <br> The total price of the index is $ 1000. <br> You can include up to 10 coins.",
+      "desc2": "Name your index, select the coins you want to include and distribute them in your index! <br> You can include up to 30 coins."
+    },
+    "title": "Cryptocurrency Index {name}",
+    "coinsListTitle": "Index {name} consists of coins:"
+  },
+
+  "indices": {
+    "title": "ICEX cryptocurrencies indices"
+  },
+
+  "exchange": {
+    "create": "Create new index",
+    "title": "The chart is based on&nbsp;data from the following exchange markets:",
+    "market": "Exchange Market",
+    "trade_pair": "Trading pair",
+    "lastTradeSum": "Last transaction in&nbsp;USD",
+    "lastTradeVol": "Volume of&nbsp;the last transaction",
+    "volume": "Total volume in&nbsp;USD",
+    "totalDemand": "Total demand in&nbsp;USD",
+    "totalOffer": "Total offer in&nbsp;",
+    "usdDesc": "* there is a recount in USD"
+  },
+
+  "period": {
+    "day": "Day",
+    "week": "Week",
+    "month": "Month"
+  },
+
+  "ui": {
+    "search": "Search",
+    "hide": "Hide",
+    "show": "Show",
+
+    "dropdown": {
+      "clearAll": "Clear all"
+    },
+
+    "sort": {
+      "title": "Sort",
+      "price": "Price",
+      "capitalization": "Capitalization",
+      "dynamic": "Dynamic",
+      "perday": "Per day",
+      "perweek": "Per week",
+      "permonth": "Per month",
+      "exchanges": "Market count"
+    },
+
+    "filter": "Filter"
+  },
+
+  "tooltip": {
+    "chart": "Chart",
+    "chartCoins": "Indices on chart",
+    "setChartTypeCandles": "Show candles",
+    "setChartTypeLinear": "Show linear",
+    "setChartSubCap": "Show capitalization",
+    "setChartSubVol": "Show volume",
+    "favorite": "Favorite",
+    "exchanges": "Exchanges",
+    "locale": "Change language",
+    "theme": "Change theme",
+    "currency": "Change currency",
+    "publish": "Publish",
+    "delete": "Delete"
+  },
+
+  "news": {
+    "title": "Cryptocurrency news",
+    "live": "Live",
+    "menu": {
+      "btc": "Bitcoin",
+      "crypto": "Cryptocurrencies",
+      "exchange": "Exchanges",
+      "world": "World",
+      "opinion": "Expert opinion",
+      "more": "More"
+    }
+  },
+
+  "error": {
+    "home": "Home page"
+  },
+
+  "chart": {
+    "title": "{coinName} Index Price Online ",
+    "showFullCoinInfo": "Expand blocks",
+    "intervals": {
+      "month": "month",
+      "week": "week",
+      "day" : "day",
+      "hour": "hour",
+      "five_minutes": "5 minutes",
+      "minute": "minute"
+    }
+  },
+
+  "form": {
+    "signin": {
+      "title": "Sing to ICEX",
+      "link": "Sing in",
+      "label" : "Don't have an account?"
+    },
+
+    "signup": {
+      "label": "Have an account?",
+      "title": "Sign Up"
+    },
+
+    "field": {
+      "name": "Name",
+      "email": "E-mail",
+      "password": "Password",
+      "password_confirmation": "Confirm password",
+      "indexName": "Index name",
+      "indexCoinCost": "Cost",
+      "indexCoinPercent": "Percent",
+      "indexCoinCount": "Count"
+    },
+
+    "keepMe": "Keep me signed",
+    "btn": "Select",
+    "submit": "Submit",
+    "delete": "Delete",
+
+    "forgot": {
+      "password": "Forgot password?"
+    },
+
+    "changePass": "Change password",
+
+    "validation": {
+      "empty": "This field cannot be empty.",
+      "invalidEmail": "E-mail is invalid",
+      "noMatch": "Password does not match the confirm password"
+    }
+  },
+
+  "user": {
+    "hello": "Hello",
+    "logout": "Logout",
+    "cabinet": "Personal cabinet",
+    "name": "User name",
+    "email": "User email"
+  },
+
+  "faq": {
+    "icex": "ICEX",
+    "title": " Terms & Condition",
+    "term": "Term of service",
+    "date": "Last update: September 27th, 2016"
+  },
+
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdate": "Last updated: January 26, 2018",
+
+    "desc": "HOLYGATE INVESTMENTS LIMITED (\"us\", \"we\", or \"our\") operates the www.icex.ch website (the \"Service\"). <br><br> This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.<br><br>We will not use or share your information with anyone except as described in this Privacy Policy.<br><br>We use your Personal Information for providing and improving the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible at www.icex.ch",
+
+    "sections": {
+      "collection": {
+        "title": "Information Collection And Use",
+        "desc": "While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to, your email address, name, phone number, postal address (\"Personal Information\")."
+      },
+      "logdata": {
+        "title": "Log Data",
+        "desc": "We may also collect information that your browser sends whenever you visit our Service (\"Log Data\"). This Log Data may include information such as your computer's Internet Protocol (\"IP\") address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages and other statistics.<br><br>In addition, we may use third party services such as Google Analytics that collect, monitor and analyze this type of information in order to increase our Service's functionality. These third party service providers have their own privacy policies addressing how they use such information."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "desc": "Cookies are files with small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and stored on your computer's hard drive.<br><br>We use \"cookies\" to collect information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service."
+      },
+      "service": {
+        "title": "Service Providers",
+        "desc": "We may employ third party companies and individuals to facilitate our Service, to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.<br><br>These third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
+      },
+      "communications": {
+        "title": "Communications",
+        "desc": "We may use your Personal Information to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send."
+      },
+      "compliance": {
+        "title": "Compliance With Laws",
+        "desc": "We will disclose your Personal Information where required to do so by law or subpoena or if we believe that such action is necessary to comply with the law and the reasonable requests of law enforcement or to protect the security or integrity of our Service."
+      },
+      "security": {
+        "title": "Security",
+        "desc": "The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security."
+      },
+      "international": {
+        "title": "International Transfer",
+        "desc": "Your information, including Personal Information, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.<br><br>If you are located outside Cyprus and choose to provide information to us, please note that we transfer the information, including Personal Information, to Cyprus and process it there.<br><br>Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer."
+      },
+      "linksToOther": {
+        "title": "Links To Other Sites",
+        "desc": "Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.<br><br>We have no control over, and assume no responsibility for the content, privacy policies or practices of any third party sites or services."
+      },
+      "children": {
+        "title": "Children's Privacy",
+        "desc": "Our Service does not address anyone under the age of 13 (\"Children\").<br><br>We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your Children has provided us with Personal Information, please contact us. If we become aware that we have collected Personal Information from a child under age 13 without verification of parental consent, we take steps to remove that information from our servers."
+      },
+      "change": {
+        "title": "Changes To This Privacy Policy",
+        "desc": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.<br><br>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "desc": "If you have any questions about this Privacy Policy, please contact us."
+      }
+    }
+  },
+
+  "terms": {
+    "title": "Terms and Conditions",
+    "lastUpdate": "Last updated: January 26, 2018",
+
+    "desc": "These Terms and Conditions (\"Terms\", \"Terms and Conditions\") govern your relationship with www.icex.ch website (the \"Service\") operated by HOLYGATE INVESTMENTS LIMITED (\"us\", \"we\", or \"our\").<br><br>Please read these Terms and Conditions carefully before using the Service.<br><br>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.<br><br>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.",
+
+    "sections": {
+      "purchases": {
+        "title": "Purchases",
+        "desc": "If you wish to purchase any product or service made available through the Service (\"Purchase\"), you may be asked to supply certain information relevant to your Purchase including, without limitation, your credit card number, the expiration date of your credit card, your billing address, and your shipping information.<br><br>You represent and warrant that: (i) you have the legal right to use any credit card(s) or other payment method(s) in connection with any Purchase; and that (ii) the information you supply to us is true, correct and complete.<br><br>By submitting such information, you grant us the right to provide the information to third parties for purposes of facilitating the completion of Purchases.<br><br>We reserve the right to refuse or cancel your order at any time for certain reasons including but not limited to: product or service availability, errors in the description or price of the product or service, error in your order or other reasons.<br><br>We reserve the right to refuse or cancel your order if fraud or an unauthorised or illegal transaction is suspected."
+      },
+      "availability": {
+        "title": "Availability, Errors and Inaccuracies",
+        "desc": "We are constantly updating our offerings of products and services on the Service. The products or services available on our Service may be mispriced, described inaccurately, or unavailable, and we may experience delays in updating information on the Service and in our advertising on other web sites.<br><br>We cannot and do not guarantee the accuracy or completeness of any information, including prices, product images, specifications, availability, and services. We reserve the right to change or update information and to correct errors, inaccuracies, or omissions at any time without prior notice."
+      },
+      "contests": {
+        "title": "Contests, Sweepstakes and Promotions",
+        "desc": "Any contests, sweepstakes or other promotions (collectively, \"Promotions\") made available through the Service may be governed by rules that are separate from these Terms. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms, the Promotion rules will apply."
+      },
+      "accounts": {
+        "title": "Accounts",
+        "desc": "When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.<br><br>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether your password is with our Service or a third-party service.<br><br>You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.<br><br>You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trade mark that is subject to any rights of another person or entity other than you without appropriate authorization, or a name that is otherwise offensive, vulgar or obscene."
+      },
+      "property": {
+        "title": "Intellectual Property",
+        "desc": "The Service and its original content, features and functionality are and will remain the exclusive property of HOLYGATE INVESTMENTS LIMITED and its licensors. The Service is protected by copyright, trademark, and other laws of both the Cyprus and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of HOLYGATE INVESTMENTS LIMITED."
+      },
+      "links": {
+        "title": "Links To Other Web Sites",
+        "desc": "Our Service may contain links to third-party web sites or services that are not owned or controlled by HOLYGATE INVESTMENTS LIMITED.<br><br>HOLYGATE INVESTMENTS LIMITED has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that HOLYGATE INVESTMENTS LIMITED shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.<br><br>We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit."
+      },
+      "termination": {
+        "title": "Termination",
+        "desc": "We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.<br><br>Upon termination, your right to use the Service will immediately cease. If you wish to terminate your account, you may simply discontinue using the Service."
+      },
+      "limitation": {
+        "title": "Limitation Of Liability",
+        "desc": "In no event shall HOLYGATE INVESTMENTS LIMITED, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose."
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "desc": "Your use of the Service is at your sole risk. The Service is provided on an \"AS IS\" and \"AS AVAILABLE\" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.<br><br> HOLYGATE INVESTMENTS LIMITED its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements."
+      },
+      "law": {
+        "title": "Governing Law",
+        "desc": "These Terms shall be governed and construed in accordance with the laws of Cyprus, without regard to its conflict of law provisions.Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have between us regarding the Service."
+      },
+      "changes": {
+        "title": "Changes To This Privacy Policy",
+        "desc": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.<br><br>By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Service."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "desc": "If you have any questions about this Privacy Policy, please contact us."
+      }
+    }
+  },
+
+  "meta": {
+    "pages": {
+      "feed": {
+        "tags": {
+          "title": "News about {tag}",
+          "desc": "News on tag {tag}. The latest information from the world of crypto-currency, insides. All events from the {tag} world."
+        }
+      },
+      "coinChart": {
+        "title": "Index Price {coin} to {currency} for {interval} - Real Time Graph Online | ICEX",
+        "desc": "Index price {coin} to {currency) for {interval} is calculated from data on transactions on the main exchanges. The most accurate indicators, on the site ICEX CH."
+      },
+      "coinExchanges": {
+        "title": "{coin} Exchanges - Buy, Sell, Trading | ICEX",
+        "desc": "List of trusted exchanges where you can buy or sell {coin} at the best price. Reviews and other information."
+      },
+      "indexChart": {
+        "title": "Cryptocurrency Index {index}",
+        "desc": "Индекс {index} состоит из {count} монет. Создайте свой собственный высокодоходный индекс."
+      },
+      "newsCategory": {
+        "title": "Cryptocurrencies News - Real Time Online | ICEX",
+        "desc": "All news from the cryptocurrency world in LIVE mode. Stay up-to-date with the latest and freshest news."
+      },
+
+      "personal": {
+        "title": "Personal page"
+      },
+      "signin": {
+        "title": "Signin page"
+      },
+      "signup": {
+        "title": "Signup page"
+      },
+
+      "faq": {
+        "title": "Frequently Asked Questions | ICEX"
+      },
+      "terms": {
+        "title": "Terms | ICEX"
+      },
+      "privacy": {
+        "title": "Privacy Policy | ICEX"
+      }
+    }
+  },
+  "feed": {
+    "tags": {
+      "tagTitle": "News about {tag}"
+    }
+  },
+  "capitalization": "capitalization",
+  "spline": "spline",
+  "volume": "volume",
+  "candlestick": "candlestick",
+  "price": "price"
+}

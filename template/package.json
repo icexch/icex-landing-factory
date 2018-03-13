@@ -1,8 +1,8 @@
 {
-  "name": "{{ name }}",
+  "name": "for-scaffolding",
   "version": "1.0.0",
-  "description": "{{ description }}",
-  "author": "{{ author }}",
+  "description": "Nuxt.js project",
+  "author": "Sergey <memonanofsa@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -13,13 +13,28 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0",
+    "node-sass": "^4.7.2",
+    "nuxt": "^1.0.0",
+    "raven-js": "^3.23.1",
+    "v-click-outside": "^1.0.3",
+    "vue": "^2.5.15",
+    "vue-i18n": "^7.5.0",
+    "vue-meta": "^1.4.3",
+    "vue-router": "^3.0.1",
+    "vuebar": "0.0.18",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "pug": "^2.0.1",
+    "pug-loader": "^2.3.0",
+    "sass": "^1.0.0-beta.5.3",
+    "sass-loader": "^6.0.7"
   }
 }

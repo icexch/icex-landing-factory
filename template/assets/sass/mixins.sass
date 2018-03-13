@@ -1,0 +1,7 @@
+@mixin breakpoint-up($point)
+  @media (min-width: $point)
+    @content
+
+@mixin breakpoint-down($point)
+  @media (max-width: $point)
+    @content

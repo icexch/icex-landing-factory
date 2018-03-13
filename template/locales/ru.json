@@ -1,0 +1,307 @@
+{
+  "aside": {
+    "index": "Индекс",
+    "selectAll": "Выбрать все",
+    "addIndex": "Добавить индекс",
+    "coinsIndex": "Индекс монет",
+    "myIndex": "Мой индекс",
+    "news": "Новости",
+    "doc": "Документы",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+
+  "coin": {
+    "min": "Минимум",
+    "avg": "Средняя",
+    "max": "Максимум",
+    "add": "Добавить монету",
+    "capitalization": "Капитализация",
+    "day_volume": "Дневной объем",
+    "volume": "Объем торгов",
+    "view": "Вид",
+    "nodata": "нет данных",
+    "change": "изменить"
+  },
+
+  "coins": {
+    "title": "Индексы монет ICEX"
+  },
+
+  "notification": {
+    "index": {
+      "created": "Индекс {index} создан, теперь вы можете заменить монеты на любые доступные",
+      "pending" : "Индекс не опубликован",
+      "active": "Индекс опубликован",
+      "error": {
+        "emptyName": "Пустое название индекса",
+        "coinsCount": "Количество монет должно быть больше или равно нулю",
+        "coinValue": "{name} - недопустимое название"
+      },
+      "coin": {
+        "error": {
+          "exceed": "{name} максимальная сумма монет 100%",
+          "sum": "Сумма всех монет должна быть 100%, сейчас {sum}",
+          "decimal": "{name} максимальное значение .xx",
+          "min": "{name} минимальное значение 1",
+          "empty": "{name} пустое",
+          "negative": "{name} значения процентов не могут быть отрицаьельные"
+        }
+      }
+    },
+    "coin": {
+      "replaced": "Добавлена {new} вместо {old}",
+      "public": "Вы можете опубликовать свой индекс нажав на кнопку \"Опубликовать\""
+    },
+    "auth": {
+      "logout": "Вы вышли",
+      "verify": "Пожалуйста подтвердите вашу почту, что бы получить доступ ко всем функциям",
+      "unsigned": "Пожалуйста войдите",
+      "signin" : {
+        "success": "Вы вошли в свой аккаунт",
+        "error": "Ошибка входа"
+      },
+      "signup" : {
+        "success": "Вы успешно зарегестрировались",
+        "error": "Ошибка входа"
+      }
+    }
+  },
+
+  "index": {
+    "yourIndex": "Ваш индекс",
+    "add": "Добавить",
+    "price": "Цена индекса:",
+    "noIndex": "Нет монет в индексе",
+    "modal": {
+      "title": "Добавь свой индекс",
+      "shure": "Вы уверены?",
+      "desc": "Придумайте название вашему индексу, выберете монеты и укажите их вес в вашем индексе! Общая цена индекса - 1000$. Максимум - 10 монет."
+    },
+    "title": "Индекс Криптовалют {name}",
+    "coinsListTitle": "Индекс {name} состоит из монет:"
+  },
+
+  "indices": {
+    "title": "Криптопалютные индексы ICEX"
+  },
+
+  "exchange": {
+    "create": "Создать новый индекс",
+    "title": "График строится на&nbsp;основании данных по&nbsp;торгам на&nbsp;биржах:",
+    "market": "Биржа",
+    "trade_pair": "Торгуемая пара",
+    "lastTradeSum": "Последняя сделка в&nbsp;usd",
+    "lastTradeVol": "Объем последней сделки",
+    "volume": "Суммарный объем в&nbsp;usd",
+    "totalDemand": "Общий спрос в&nbsp;usd",
+    "totalOffer": "Общее предложение в&nbsp;",
+    "usdDesc": "* идет пересчет в USD"
+  },
+
+  "period": {
+    "day": "День",
+    "week": "Неделя",
+    "month": "Месяц"
+  },
+
+  "ui": {
+    "search": "Поиск",
+    "hide": "Скрыть",
+    "show": "Раскрыть",
+
+    "dropdown": {
+      "clearAll": "Очистить все"
+    },
+
+    "sort": {
+      "title": "Сортировать",
+      "price": "Цена",
+      "capitalization": "Капитализация",
+      "dynamic": "Динамика роста/падения",
+      "perday": "За день",
+      "perweek": "Неделю",
+      "permonth": "Месяц",
+      "exchanges": "Количество бирж"
+    },
+
+    "filter": "Фильтровать"
+  },
+
+  "tooltip": {
+    "chart": "На графике",
+    "chartCoins": "Индексы на графике",
+    "setChartTypeCandles": "Показывать свечки",
+    "setChartTypeLinear": "Показывать линии",
+    "setChartSubCap": "Показывать капитализацию",
+    "setChartSubVol": "Показывать объем",
+    "favorite": "Избранное",
+    "exchanges": "Биржи",
+    "locale": "Cменить язык",
+    "theme": "Cменить тему",
+    "currency": "Cменить валюту",
+    "publish": "Oпубликовать"
+  },
+
+  "news": {
+    "title": "Новости криптовалют",
+    "live": "Live",
+    "menu": {
+      "btc": "Биткоин",
+      "crypto": "Криптовалюты",
+      "exchange": "Биржи",
+      "world": "Мир",
+      "opinion": "Мнения экспертов",
+      "more": "Еще"
+    }
+  },
+
+  "error": {
+    "home": "Home page"
+  },
+
+  "chart": {
+    "title": "{coinName} Индекс Цены - Онлайн",
+    "showFullCoinInfo": "Развернуть блоки",
+    "intervals": {
+      "month": "месяц",
+      "week": "неделя",
+      "day" : "день",
+      "hour": "час",
+      "five_minutes": "5 минут",
+      "minute": "минута"
+    }
+  },
+
+  "form": {
+    "signin": {
+      "title": "Sing to ICEX",
+      "link": "Sing in",
+      "label" : "Don't have an account?"
+    },
+
+    "signup": {
+      "label": "Have an account?",
+      "title": "Sign Up"
+    },
+
+    "field": {
+      "name": "Name",
+      "email": "E-mail",
+      "password": "Password",
+      "password_confirmation": "Confirm password",
+      "indexName": "Index name"
+    },
+
+    "keepMe": "Keep me signed",
+    "btn": "Select",
+    "submit": "Submit",
+    "delete": "Удалить",
+
+    "forgot": {
+      "password": "Forgot password?"
+    },
+
+    "changePass": "Change password",
+
+    "validation": {
+      "empty": "Thin field cannot be empty.",
+      "invalidEmail": "E-mail is invalid",
+      "noMatch": "Password does not match the confirm password",
+      "short": "Value is short"
+    }
+  },
+
+  "auth": {
+    "signin": {
+      "title": "Вход в ICEX",
+      "link": "Вход",
+      "label" : "Нет аккаунта?"
+    },
+
+    "signup": {
+      "label": "Есть аккаунт?",
+      "title": " Авторизация"
+    },
+
+    "field": {
+      "name": "Имя",
+      "email": "E-mail",
+      "password": "Пароль",
+      "password_confirmation": "Подтвердите пароль",
+      "indexName": "Название индекса"
+    },
+
+    "keepMe": "Запомните меня",
+    "btn": "Выбрать",
+    "submit": "Отправить",
+
+    "forgot": {
+      "password": "Забыли пароль?"
+    },
+
+    "changePass": "Смена пароля",
+
+    "validation": {
+      "empty": "Это поле не может  быть пустым",
+      "invalidEmail": "Не верный е-mail",
+      "noMatch": "Пароль не соответствует подтвержденному",
+      "short": "Значение слишком короткое"
+    }
+  },
+
+  "user": {
+    "hello": "Здравствуйте",
+    "logout": "Выход",
+    "cabinet": "Личный кабинет",
+    "name": "Имя пользователя",
+    "email": "E-mail пользователя"
+  },
+
+  "meta": {
+    "pages": {
+      "feed": {
+        "tags": {
+          "title": "Новости о {tag}",
+          "desc": "Новости по тегу {tag}. Последняя информация из мира криптовалют, инсайды. Все события из мира {tag}."
+        }
+      },
+      "coinChart": {
+        "title": "Курс {coin} к {currency} за {interval} - Цена в реальном времени онлайн ICEX",
+        "desc": "Индекс курса {coin} к {currency} за {interval} рассчитывается из данных по транзакциям на главных биржах. Самые точные показатели, на сайте ICEX CH."
+      },
+      "coinExchanges": {
+        "title": "Список бирж {coin} - Купить, Продать, Обменять | ICEX",
+        "desc": "Список проверенных бирж, где вы сможете купить или продать {coin} по лучшей цене. Отзывы и другая информация."
+      },
+      "indexChart": {
+        "title": "Индекс Криптовалют {index}",
+        "desc": "Индекс {index} состоит из {count} монет. Создайте свой собственный высокодоходный индекс."
+      },
+      "newsCategory": {
+        "title": "Все новости о криптовалютах в реальном времени - Онлайн | ICEX",
+        "desc": "Все новости из мира криптовалют в LIVE режиме. Будьте в курсе последних и самых свежих новостей. "
+      },
+      "faq": {
+        "title": "Часто задаваемые вопросы | ICEX"
+      },
+      "terms": {
+        "title": "Правила | ICEX"
+      },
+      "privacy": {
+        "title": "Политика конфиденциальности | ICEX"
+      }
+    }
+  },
+  "feed": {
+    "tags": {
+      "tagTitle": "Новости о {tag}"
+    }
+  },
+  "capitalization": "капитализация",
+  "spline": "линия",
+  "volume": "объем",
+  "candlestick": "свечки",
+  "price": "цена"
+}
