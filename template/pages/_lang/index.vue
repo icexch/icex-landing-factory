@@ -1,20 +1,62 @@
 <template lang="pug">
-  h1 hello world
+  //- span {{locale}}
+  ui-header(
+      :data="headerData"
+      @clickbtn="emitBtnClick"
+    )
+      template(slot="headerContent")
+        h1 here is header content
+
+
+      .header__btns(slot="headerBtns")
+        h1 here is btns
 </template>
 
 <script>
-  // import uikit from 'icex-langing-uikit'
+  import uiHeader from 'icex-landing-uikit/uiHeader/uiHeader.vue'
+  import { mapState, mapGetters } from 'vuex';
   export default {
     name: 'boilerplate',
     mixins: [],
     props: [],
     data() {
-      return {};
+      return {
+
+      };
     },
-    components: {},
+    components: {
+      uiHeader,
+    },
     watch: {},
-    methods: {},
-    computed: {},
+    methods: {
+      emitBtnClick() {
+        console.log('emit');
+      },
+    },
+    computed: {
+      ...mapGetters({
+        locale: 'common/locale',
+      }),
+      headerData() {
+        return {
+          locale: this.locale,
+          logo: {
+            url: '/img/logo.svg',
+          },
+          share: {
+            // chage with $t('header.share')
+            title: 'Follow us',
+          },
+          menu: [
+            'Menu item 1',
+            'Menu item 2',
+            'Menu item 3',
+            'Menu item 4',
+            'Menu item 5',
+          ]
+        }
+      },
+    },
     fetch({ redirect, params }) {
     },
     beforeCreate() {},
@@ -31,6 +73,13 @@
   };
 </script>
 
-<style>
+<style lang="sass">
+  $font-family-base: 'Montserrat'
+  $primary: #021032
+  $secondary: #0b50cd
+  $info: #e7e9f1
 
+  @import "~bootstrap/scss/bootstrap.scss";
+
+  @import "~icex-landing-uikit/uiHeader/uiHeader";
 </style>

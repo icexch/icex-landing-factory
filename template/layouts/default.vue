@@ -90,40 +90,6 @@
 </script>
 
 <style lang="sass">
-  @import "~assets/sass/vars.sass";
-  @import "~bootstrap/scss/bootstrap.scss";
 
-  .layout__container
-    height: 100vh
-    position: relative
-    padding-top: 3.4rem
-    padding-left: 3.4rem
-    margin: auto
-    transition: 0.3s
-
-    @include media-breakpoint-down(md)
-      padding-left: .4rem
-      padding-right: .4rem
-      padding-top: 3.2rem
-
-    &.__short
-      padding-left: 11.2rem
-      @include media-breakpoint-down(md)
-        padding-left: .4rem
-
-    &.dark
-      color: $athens_gray
-      border: 1px solid $rhino
-      background-color: #181c31
-
-    &.light
-      color: $tangaroa
-      border: 1px solid $mischka
-      background-color: $catskill_white
-
-  .layout__content
-    height: 100%
-    overflow-y: scroll
-    padding-right: .6rem
 
 </style>

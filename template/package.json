@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-core": "^6.26.0",
     "bootstrap": "^4.0.0",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0",
-    "raven-js": "^3.23.1",
     "v-click-outside": "^1.0.3",
     "vue": "^2.5.15",
     "vue-i18n": "^7.5.0",

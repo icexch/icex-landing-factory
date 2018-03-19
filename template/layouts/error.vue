@@ -39,7 +39,6 @@
 </script>
 
 <style lang="sass">
-  @import "~assets/sass/vars.sass";
   @import "~bootstrap/scss/bootstrap.scss";
 
   .error__wrap
@@ -118,21 +117,21 @@
 
   .error__wrap
     &.light
-      background-color: $catskill_white
+      // background-color: $catskill_white
 
   .light
     .error__code
-      color: $denim
+      // color: $denim
       font-weight: bold
 
     .error__title
-      color: $tangaroa
+      // color: $tangaroa
 
     .error__desc
-      color: $catalina_blue
+      // color: $catalina_blue
 
     .error__link
       color: white
-      background-color: $denim
+      // background-color: $denim
 
 </style>

@@ -22,7 +22,6 @@ module.exports = {
   ** Customize the progress bar color
   */
   css: [
-    { src: 'assets/sass/base.sass', lang: 'sass' },
     { src: 'node_modules/bootstrap/scss/bootstrap.scss', lang: 'sass' },
   ],
   loading: { color: '#3B8070' },
