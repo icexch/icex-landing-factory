@@ -1,18 +1,22 @@
 <template lang="pug">
-  //- span {{locale}}
-  ui-header(
-      :data="headerData"
-      @clickbtn="emitBtnClick"
-    )
-      template(slot="headerContent")
-        h1 here is header content
+
+  ui-section(:data="section1")
+    div(slot="sectionContent")
+      ui-header(
+          :data="headerData"
+          @clickbtn="emitBtnClick"
+        )
+          template(slot="headerContent")
+            h1 here is header content
 
 
-      .header__btns(slot="headerBtns")
-        h1 here is btns
+          .header__btns(slot="headerBtns")
+            h1 here is btns
+
 </template>
 
 <script>
+  import uiSection from 'icex-landing-uikit/uiSection/uiSection.vue'
   import uiHeader from 'icex-landing-uikit/uiHeader/uiHeader.vue'
   import { mapState, mapGetters } from 'vuex';
   export default {
@@ -21,11 +25,20 @@
     props: [],
     data() {
       return {
-
+        section1: {
+          label: {
+            text: '',
+            classes: ['text-warning', 'h4'],
+          },
+          container: {
+            classes: ['bg-info', 'section__cotnainer--fullheight'],
+          }
+        },
       };
     },
     components: {
       uiHeader,
+      uiSection,
     },
     watch: {},
     methods: {
