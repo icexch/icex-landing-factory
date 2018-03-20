@@ -50,15 +50,6 @@ module.exports = {
         ]
       }
     },
-    extend (config, { isServer }) {
-      if (isServer) {
-        config.externals += [
-          require('webpack-node-externals')({
-            whitelist: [/^vue-slick/]
-          })
-        ]
-      }
-    }
   },
   plugins: [
     { src: '~/plugins/i18n.js', ssr: true },

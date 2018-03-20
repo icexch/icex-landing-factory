@@ -140,6 +140,7 @@
 </script>
 
 <style lang="sass">
+
   $font-family-base: 'Montserrat'
   $primary: #021032
   $secondary: #0b50cd
