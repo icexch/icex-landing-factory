@@ -28,7 +28,7 @@ module.exports = {
   */
   css: [
     { src: 'node_modules/bootstrap/scss/bootstrap.scss', lang: 'sass' },
-    { src: 'node_modules/slick-carousel/slick/slick.scss', lang: 'scss' },
+    // { src: 'node_modules/flickity/dist/flickity.min.css', lang: 'css' },
   ],
   loading: { color: '#3B8070' },
   /*
@@ -38,6 +38,7 @@ module.exports = {
     vendor: [
       'vue-i18n',
       'v-click-outside',
+      'vue-flickity',
     ],
 
     extend (config, { isServer }) {
@@ -61,8 +62,8 @@ module.exports = {
   },
   plugins: [
     { src: '~/plugins/i18n.js', ssr: true },
+    { src: '~/plugins/vueFlickity.js', ssr: false },
     { src: '~/plugins/clickOutside.js', ssr: false },
     { src: '~/plugins/uiKit.js', ssr: true },
-    { src: '~/plugins/vueflickity.js', ssr: false },
   ],
 }

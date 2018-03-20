@@ -1,28 +1,30 @@
 <template lang="pug">
   div
     ui-section(:data="section1")
-      div(slot="sectionContent")
+      template(slot="sectionContent")
 
         ui-header(
           :data="headerData"
           @clickbtn="emitBtnClick"
         )
           template(slot="headerContent")
-            no-ssr
-              
+
+            ui-slider(:flickityOptions="flickityOptions")
+              .currency__slide(v-for="data in sliderData" slot="sliderContent")
+                small(v-html="data.name")
+                .d-flex.align-items-end.align-content-end
+                  small {{ data.price.value }}
+                  span.d-flex.align-items-end.align-content-end
+                    span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
+                    small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
           .header__btns(slot="headerBtns")
             ui-link(type="link" text="Sign in" :link="`${appLink}/signin`")
             ui-link(type="primary-outline" text="Sign up" :link="`${appLink}/signup`" @clickbtn="emitBtnClick")
 
-    ui-section(:data="section2")
-      div(slot="sectionContent")
 
-    ui-section(:data="section3")
-      div(slot="sectionContent")
-
-    ui-footer(:data="footerData")
-      div(slot="footerForm")
+    ui-footer(:footerData="footerData")
+      template(slot="footerForm")
 
 </template>
 
@@ -74,98 +76,14 @@
             title: 'Follow us',
           },
         },
-        sliderOptions: {
-          slidesToScroll: 1,
-          slidesToShow: 10,
-          infinite: true,
-          dots: false,
-          speed: 700,
-          responsive: [
-            {
-              breakpoint: 1800,
-              settings: {
-                slidesToShow: 10,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 1600,
-              settings: {
-                slidesToShow: 9,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 1480,
-              settings: {
-                slidesToShow: 7,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 1240,
-              settings: {
-                slidesToShow: 6,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 1040,
-              settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 880,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 5,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-              },
-            },
-            {
-              breakpoint: 700,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 520,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-              },
-            },
-            {
-              breakpoint: 460,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-            {
-              breakpoint: 360,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              },
-            },
-          ],
+
+        flickityOptions: {
+          cellAlign: 'left',
+          freeScroll: true,
+          wrapAround: true,
+          contain: true,
+          prevNextButtons: true,
+          pageDots: false,
         },
       };
     },
