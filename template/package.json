@@ -16,7 +16,7 @@
     "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "bootstrap": "^4.0.0",
-    "icex-landing-uikit": "^0.1.10",
+    "icex-landing-uikit": "^0.1.13",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0",
     "v-click-outside": "^1.0.3",

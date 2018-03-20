@@ -1,30 +1,27 @@
 <template lang="pug">
   div
-    ui-section(:data="section1")
-      template(slot="sectionContent")
+    ui-section(:sectionData="section1")
 
-        ui-header(
-          :data="headerData"
-          @clickbtn="emitBtnClick"
-        )
-          template(slot="headerContent")
+      ui-header(
+        slot="sectionContent"
+        :headerData="headerData"
+        @clickbtn="emitBtnClick"
+      )
+        ui-slider(:flickityOptions="flickityOptions" slot="headerContent")
+          .currency__slide(v-for="data in sliderData" slot="sliderContent")
+            small(v-html="data.name")
+            .d-flex.align-items-end.align-content-end
+              small {{ data.price.value }}
+              span.d-flex.align-items-end.align-content-end
+                span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
+                small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
-            ui-slider(:flickityOptions="flickityOptions")
-              .currency__slide(v-for="data in sliderData" slot="sliderContent")
-                small(v-html="data.name")
-                .d-flex.align-items-end.align-content-end
-                  small {{ data.price.value }}
-                  span.d-flex.align-items-end.align-content-end
-                    span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
-                    small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
-
-          .header__btns(slot="headerBtns")
-            ui-link(type="link" text="Sign in" :link="`${appLink}/signin`")
-            ui-link(type="primary-outline" text="Sign up" :link="`${appLink}/signup`" @clickbtn="emitBtnClick")
+        .header__btns(slot="headerBtns")
+          ui-link(type="link" text="Sign in" :link="`${appLink}/signin`")
+          ui-link(type="primary-outline" text="Sign up" :link="`${appLink}/signup`" @clickbtn="emitBtnClick")
 
 
     ui-footer(:footerData="footerData")
-      template(slot="footerForm")
 
 </template>
 
@@ -79,9 +76,8 @@
 
         flickityOptions: {
           cellAlign: 'left',
-          freeScroll: true,
+          // freeScroll: true,
           wrapAround: true,
-          contain: true,
           prevNextButtons: true,
           pageDots: false,
         },
