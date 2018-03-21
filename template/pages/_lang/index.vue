@@ -6,14 +6,15 @@
         :headerData="headerData"
         @clickbtn="emitBtnClick"
       )
-        ui-slider(:flickityOptions="flickityOptions" slot="headerContent")
-          .currency__slide(v-for="data in sliderData" slot="sliderContent")
-            small(v-html="data.name")
-            .d-flex.align-items-end.align-content-end
-              small {{ data.price.value }}
-              span.d-flex.align-items-end.align-content-end
-                span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
-                small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
+        no-ssr(slot="headerContent")
+          ui-slider(:flickityOptions="flickityOptions" v-if="showSlider")
+            .currency__slide(v-for="data in sliderData" slot="sliderContent")
+              small(v-html="data.name")
+              .d-flex.align-items-end.align-content-end
+                small {{ data.price.value }}
+                span.d-flex.align-items-end.align-content-end
+                  span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
+                  small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
         .header__btns(slot="headerBtns")
           ui-link(type="link" text="Sign in" :link="`${appLink}/signin`")
@@ -33,6 +34,7 @@
     props: [],
     data() {
       return {
+        showSlider: false,
         section1: {
           label: {
             text: '',
@@ -135,7 +137,10 @@
         convert: this.currency,
         detail: true,
       };
-      this.$store.dispatch('coins/fetchAllCoinsData',params );
+      this.$store.dispatch('coins/fetchAllCoinsData', params )
+        .then(() => {
+          this.showSlider = true;
+        });
     },
     beforeUpdate() {},
     updated() {},

@@ -61,7 +61,6 @@ const actions = {
     const { data } = await coins().fetchAll(params);
 
     data.data.forEach((coin) => {
-      console.log(coin);
       commit(SET_COIN_DATA, { name: coin.name, data: coin });
     });
 
