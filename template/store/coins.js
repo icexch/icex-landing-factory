@@ -60,8 +60,9 @@ const actions = {
   async fetchAllCoinsData({ commit }, params) {
     const { data } = await coins().fetchAll(params);
 
-    Object.keys(data.data).forEach((coin) => {
-      commit(SET_COIN_DATA, { name: coin, data: data.data[coin] });
+    data.data.forEach((coin) => {
+      console.log(coin);
+      commit(SET_COIN_DATA, { name: coin.name, data: coin });
     });
 
     return data;

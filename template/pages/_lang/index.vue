@@ -1,7 +1,6 @@
 <template lang="pug">
   div
     ui-section(:sectionData="section1")
-
       ui-header(
         slot="sectionContent"
         :headerData="headerData"
@@ -20,7 +19,7 @@
           ui-link(type="link" text="Sign in" :link="`${appLink}/signin`")
           ui-link(type="primary-outline" text="Sign up" :link="`${appLink}/signup`" @clickbtn="emitBtnClick")
 
-
+          
     ui-footer(:footerData="footerData")
 
 </template>
@@ -93,10 +92,12 @@
     },
     computed: {
       ...mapGetters({
-        locale: 'common/locale',
+        localeData: 'common/locale',
       }),
       ...mapState({
-        sliderData: state => state.common.sliderData,
+        sliderData: state => state.coins.data,
+        currency: state => state.common.currency,
+        locale: state => state.common.locale,
       }),
 
       appLink() {
@@ -105,7 +106,7 @@
 
       headerData() {
         return {
-          locale: this.locale,
+          locale: this.localeData,
           logo: {
             url: '/img/logo.svg',
           },
@@ -124,11 +125,18 @@
       },
     },
     fetch({ redirect, params }) {
+
     },
     beforeCreate() {},
     created() {},
     beforeMount() {},
-    mounted() {},
+    mounted() {
+      const params = {
+        convert: this.currency,
+        detail: true,
+      };
+      this.$store.dispatch('coins/fetchAllCoinsData',params );
+    },
     beforeUpdate() {},
     updated() {},
     activated() {},
