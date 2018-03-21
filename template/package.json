@@ -1,11 +1,18 @@
 {
-  "name": "for-scaffolding",
+  "name": "icex-landing-factory",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
-  "author": "Sergey <memonanofsa@gmail.com>",
-  "private": true,
+  "description": "ICEX landing page factory based on Nuxt.js starter template",
+  "private": false,
+  "author": {
+    "name": "andskur",
+    "email": "a.skurlatov@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icexch/icex-landing-factory.git"
+  },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "npm update icex-landing-uikit && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",

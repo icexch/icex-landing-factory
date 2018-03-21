@@ -10,7 +10,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
 $ vue init icexch/icex-landing-factory landing-name
-$ cd landing-namet                     
+$ cd landing-name
 # install dependencies
 $ npm install # Or yarn install
 ```
