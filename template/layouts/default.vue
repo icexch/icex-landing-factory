@@ -85,6 +85,10 @@
         locale: state => state.common.locale,
       }),
     },
+
+    mounted() {
+      this.$store.dispatch('common/setUserDefaultParams');
+    }
   };
 
 </script>

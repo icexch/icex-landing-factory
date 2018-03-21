@@ -3,7 +3,6 @@ import axios from 'axios';
 import https from 'https';
 import get from 'lodash.get';
 import qs from 'qs';
-import Raven from 'raven-js';
 import common from '~/store/common';
 import notifications from '~/store/notifications';
 
@@ -31,7 +30,6 @@ function _request(method, baseURL, endpoint, parameters) {
 
   return instance(opt)
     .catch((e) => {
-      Raven.captureException(e);
       /* eslint-disable no-console */
       if (e.response) {
         console.log(`
