@@ -697,18 +697,14 @@ const state = () => ({
 const actions = {
   setUserLocale({ commit }, locale) {
     commit(SET_USER_LOCALE, locale);
-    Raven.setTagsContext({
-      locale,
-    });
+    
   },
   setUserDevice({ commit }, flag) {
     commit(SET_USER_DEVICE, flag);
   },
   setUserTheme({ commit }, theme) {
     commit(SET_USER_THEME, theme);
-    Raven.setTagsContext({
-      theme,
-    });
+    
   },
   setUserMenuSize({ commit }, size) {
     // min || max
@@ -716,9 +712,7 @@ const actions = {
   },
   setUserCurrency({ commit }, currency) {
     commit(SET_USER_CURRENCY, currency);
-    Raven.setTagsContext({
-      currency,
-    });
+    
   },
   setUserDataView({ commit }, params) {
     commit(SET_USER_DATA_VIEW, params);

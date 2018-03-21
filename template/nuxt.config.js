@@ -28,7 +28,6 @@ module.exports = {
   */
   css: [
     { src: 'node_modules/bootstrap/scss/bootstrap.scss', lang: 'sass' },
-    // { src: 'node_modules/flickity/dist/flickity.min.css', lang: 'css' },
   ],
   loading: { color: '#3B8070' },
   /*
