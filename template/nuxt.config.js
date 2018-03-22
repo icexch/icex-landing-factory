@@ -52,8 +52,8 @@ module.exports = {
   },
   plugins: [
     { src: '~/plugins/i18n.js', ssr: true },
-    { src: '~/plugins/vueFlickity.js', ssr: false },
-    { src: '~/plugins/clickOutside.js', ssr: false },
-    { src: '~/plugins/uiKit.js', ssr: true },
+    { src: '~/plugins/vue-flickity.js', ssr: false },
+    { src: '~/plugins/click-outside.js', ssr: false },
+    { src: '~/plugins/ui-kit.js', ssr: true },
   ],
 }
