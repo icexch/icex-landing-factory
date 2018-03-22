@@ -1,6 +1,19 @@
 {
   "btn": {
     "signin": "Вход",
-    "signup": "Регистрация"
+    "signup": "Регистрация",
+    "send": "Отправить"
+  },
+
+  "form": {
+    "placeholder": {
+      "name": "Имя",
+      "email": "Email",
+      "message": "Сообщение"
+    }
+  },
+
+  "social": {
+    "title": "Подпишитесь"
   }
 }

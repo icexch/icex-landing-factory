@@ -1,16 +1,16 @@
 <template lang="pug">
+
   div
     section1(:socials="socials")
+    landing-footer(:socials="socials")
 
-    ui-footer(
-      :footerData="footerData"
-      :socials="socials"
-    )
 
 </template>
 
 <script>
   import section1 from '~/components/sections/section1.vue'
+  import landingFooter from '~/components/landingFooter.vue'
+
   import { mapState, mapGetters } from 'vuex';
   export default {
     name: 'home_page',
@@ -40,27 +40,14 @@
             url: 'https://twitter.com/icex_ch',
           },
         ],
-        footerData: {
-          logo: {
-            url: '/img/logo_footer.svg',
-          },
-          email: 'info@icex.ch',
-          copyright: '© 2017 ICEX | Holygate Investments',
-          share: {
-            // chage with $t('header.share')
-            title: 'Follow us',
-          },
-        },
       };
     },
     watch: {},
     methods: {
-      emitBtnClick() {
-        console.log('emit');
-      },
     },
     components: {
       section1,
+      landingFooter,
     },
     computed: {
       ...mapGetters({
@@ -90,16 +77,6 @@
 
 <style lang="sass">
 
-  $font-family-base: 'Montserrat'
-  $primary: #021032
-  $secondary: #0b50cd
-  $info: #e7e9f1
-  // example of changing header burger bg
-  // $header-burger-bg: red
-
-  @import "~bootstrap/scss/bootstrap.scss";
-
-  @import "~icex-landing-uikit/index.sass";
-
+  @import '~assets/base.sass'
 
 </style>

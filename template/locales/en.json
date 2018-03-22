@@ -1,6 +1,19 @@
 {
   "btn": {
     "signin": "Sign in",
-    "signup": "Sign up"
+    "signup": "Sign up",
+    "send": "Send"
+  },
+
+  "form": {
+    "placeholder": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    }
+  },
+
+  "social": {
+    "title": "Follow us"
   }
 }

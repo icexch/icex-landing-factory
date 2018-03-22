@@ -19,7 +19,7 @@
           },
           container: {
             classes: ['bg-info', 'section__cotnainer--fullheight'],
-          }
+          },
         },
       };
     },
