@@ -35,7 +35,7 @@
   import { mapState, mapGetters } from 'vuex';
 
   export default {
-    name: 'section1',
+    name: 'section-1',
     mixins: [],
     props: {
       socials: {
@@ -61,7 +61,8 @@
           },
           container: {
             classes: ['bg-info', 'section__cotnainer--fullheight'],
-          }
+          },
+          id: '1',
         },
       };
     },
