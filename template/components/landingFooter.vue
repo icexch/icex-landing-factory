@@ -119,7 +119,6 @@
       sendForm() {
         _post(this.baseUrl, 'landing/contact', this.form)
           .then((data) => {
-            console.log(data);
             if (data.data.result) {
               this.form = {}
             }
