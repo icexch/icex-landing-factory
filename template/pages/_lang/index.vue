@@ -5,23 +5,32 @@
         slot="sectionContent"
         :headerData="headerData"
         @clickbtn="emitBtnClick"
+        :socials="socials"
       )
-        no-ssr(slot="headerContent")
-          ui-slider(:flickityOptions="flickityOptions" v-if="showSlider")
-            .currency__slide(v-for="data in sliderData" slot="sliderContent")
-              small(v-html="data.name")
-              .d-flex.align-items-end.align-content-end
-                small {{ data.price.value }}
-                span.d-flex.align-items-end.align-content-end
-                  span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
-                  small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
+        ui-slider(
+          slot="headerContent"
+          v-if="showSlider"
+          :flickityOptions="flickityOptions"
+        )
+          .currency__slide(
+            slot="sliderContent"
+            v-for="data in sliderData"
+          )
+            small(v-html="data.name")
+            .d-flex.align-items-end.align-content-end
+              small {{ data.price.value }}
+              span.d-flex.align-items-end.align-content-end
+                span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
+                small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
         .header__btns(slot="headerBtns")
           ui-link(type="link" text="Sign in" :link="`${appLink}/signin`")
           ui-link(type="primary-outline" text="Sign up" :link="`${appLink}/signup`" @clickbtn="emitBtnClick")
 
-          
-    ui-footer(:footerData="footerData")
+    ui-footer(
+      :footerData="footerData"
+      :socials="socials"
+    )
 
 </template>
 
@@ -35,6 +44,28 @@
     data() {
       return {
         showSlider: false,
+        socials: [
+          {
+            name: 'facebook',
+            url: 'https://www.facebook.com/ICEX.CH/',
+          },
+          {
+            name: 'vkontakte',
+            url: 'https://vk.com/icexch',
+          },
+          {
+            name: 'instagram',
+            url: 'https://www.instagram.com/icex.ch/',
+          },
+          {
+            name: 'telegram',
+            url: 'https://t.me/icexch',
+          },
+          {
+            name: 'twitter',
+            url: 'https://twitter.com/icex_ch',
+          },
+        ],
         section1: {
           label: {
             text: '',
@@ -69,6 +100,8 @@
           logo: {
             url: '/img/logo_footer.svg',
           },
+          email: 'info@icex.ch',
+          copyright: '© 2017 ICEX | Holygate Investments',
           share: {
             // chage with $t('header.share')
             title: 'Follow us',

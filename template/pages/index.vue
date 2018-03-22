@@ -16,9 +16,9 @@
     computed: {},
     fetch({ redirect, params }) {
       if (params.lang === 'ko') {
-        redirect(307, '/en/');
+        redirect(307, '/en');
       }
-      redirect(307, '/en/');
+      redirect(307, '/en');
     },
     beforeCreate() {},
     created() {},
