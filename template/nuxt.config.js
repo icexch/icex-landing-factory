@@ -38,6 +38,7 @@ module.exports = {
       'vue-i18n',
       'v-click-outside',
       'vue-flickity',
+      'vue-scrollto',
     ],
 
     extend (config, { isServer }) {
@@ -52,8 +53,9 @@ module.exports = {
   },
   plugins: [
     { src: '~/plugins/i18n.js', ssr: true },
-    { src: '~/plugins/vue-flickity.js', ssr: false },
-    { src: '~/plugins/click-outside.js', ssr: false },
     { src: '~/plugins/ui-kit.js', ssr: true },
+    { src: '~/plugins/vue-flickity.js', ssr: false },
+    { src: '~/plugins/vue-scrollto.js', ssr: false },
+    { src: '~/plugins/click-outside.js', ssr: false },
   ],
 }

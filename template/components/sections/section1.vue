@@ -1,0 +1,130 @@
+<template lang="pug">
+
+  ui-section(:sectionData="sectionData")
+
+    ui-header(
+      slot="sectionContent"
+      :headerData="headerData"
+      :socials="socials"
+    )
+      ui-slider(
+        slot="headerContent"
+        v-if="showSlider"
+        :flickityOptions="flickityOptions"
+      )
+        .currency__slide(
+          slot="sliderContent"
+          v-for="data in sliderData"
+        )
+          small(v-html="data.name")
+          .d-flex.align-items-end.align-content-end
+            small {{ data.price.value }}
+            span.d-flex.align-items-end.align-content-end
+              span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
+              small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
+
+      .header__btns(slot="headerBtns")
+
+        a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
+        a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
+
+
+</template>
+
+<script>
+  import { mapState, mapGetters } from 'vuex';
+
+  export default {
+    name: 'section1',
+    mixins: [],
+    props: {
+      socials: {
+        type: Array,
+        required: true,
+      }
+    },
+    data() {
+      return {
+        showSlider: false,
+
+        flickityOptions: {
+          cellAlign: 'left',
+          wrapAround: true,
+          prevNextButtons: true,
+          pageDots: false,
+        },
+
+        sectionData: {
+          label: {
+            text: '',
+            classes: ['text-warning', 'h4'],
+          },
+          container: {
+            classes: ['bg-info', 'section__cotnainer--fullheight'],
+          }
+        },
+      };
+    },
+    components: {},
+    watch: {},
+    methods: {},
+    computed: {
+      headerData() {
+        return {
+          locale: this.localeData,
+          logo: {
+            url: '/img/logo.svg',
+          },
+          share: {
+            // chage with $t('header.share')
+            title: 'Follow us',
+          },
+          menu: [
+            'Menu item 1',
+            'Menu item 2',
+            'Menu item 3',
+            'Menu item 4',
+            'Menu item 5',
+          ]
+        }
+      },
+      ...mapGetters({
+        localeData: 'common/locale',
+      }),
+      ...mapState({
+        sliderData: state => state.coins.data,
+        currency: state => state.common.currency,
+        locale: state => state.common.locale,
+      }),
+
+      appLink() {
+        return `https://app.icex.ch/${this.locale.active}/auth`
+      },
+    },
+    fetch() {},
+    beforeCreate() {},
+    created() {},
+    beforeMount() {},
+    mounted() {
+      const params = {
+        convert: this.currency,
+        detail: true,
+      };
+      this.$store.dispatch('coins/fetchAllCoinsData', params )
+        .then(() => {
+          this.showSlider = true;
+        });
+    },
+    beforeUpdate() {},
+    updated() {},
+    activated() {},
+    deactivated() {},
+    beforeDestroy() {},
+    destroyed() {},
+    errorCaptured() {},
+  };
+</script>
+
+<style lang="sass">
+  
+</style>
