@@ -22,10 +22,10 @@
                   span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
                   small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
-          .header__btns(slot="headerBtns")
+        .header__btns(slot="headerBtns")
 
-            a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
-            a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
+          a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
+          a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
 
 
 </template>
@@ -77,6 +77,7 @@
           },
           share: {
             // chage with $t('header.share')
+            class: 'white',
             title: 'Follow us',
           },
           menu: [

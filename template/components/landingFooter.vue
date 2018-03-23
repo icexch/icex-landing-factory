@@ -64,13 +64,18 @@
           message: [],
         },
         footerData: {
+          bg: 'bg-white',
           logo: {
-            url: '/img/logo_footer.svg',
+            url: '/img/logo.svg',
+          },
+          form: {
+            class: 'bg-danger',
           },
           email: 'info@icex.ch',
           copyright: '© 2017 ICEX | Holygate Investments',
           share: {
             // chage with $t('header.share')
+            color: 'secondary',
             title: this.$t('social.title'),
           },
         },
