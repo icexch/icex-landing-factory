@@ -28,6 +28,7 @@
     "mobile-detect": "^1.4.1",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0",
+    "svg-sprite-loader": "^3.7.3",
     "v-click-outside": "^1.0.3",
     "vue": "^2.5.15",
     "vue-flickity": "^1.0.9",

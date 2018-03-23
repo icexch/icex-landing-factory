@@ -1,32 +1,31 @@
 <template lang="pug">
 
   ui-section(:sectionData="sectionData")
-
-    ui-header(
-      slot="sectionContent"
-      :headerData="headerData"
-      :socials="socials"
-    )
-      ui-slider(
-        slot="headerContent"
-        v-if="showSlider"
-        :flickityOptions="flickityOptions"
+    template(slot="sectionContent")
+      ui-header(
+        :headerData="headerData"
+        :socials="socials"
       )
-        .currency__slide(
-          slot="sliderContent"
-          v-for="data in sliderData"
+        ui-slider(
+          slot="headerContent"
+          v-if="showSlider"
+          :flickityOptions="flickityOptions"
         )
-          small(v-html="data.name")
-          .d-flex.align-items-end.align-content-end
-            small(v-html="data.price.value")
-            span.d-flex.align-items-end.align-content-end
-              span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
-              small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
+          .currency__slide(
+            slot="sliderContent"
+            v-for="data in sliderData"
+          )
+            small(v-html="data.name")
+            .d-flex.align-items-end.align-content-end
+              small(v-html="data.price.value")
+              span.d-flex.align-items-end.align-content-end
+                span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
+                small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
-      .header__btns(slot="headerBtns")
+        .header__btns(slot="headerBtns")
 
-        a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
-        a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
+          a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
+          a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
 
 
 </template>

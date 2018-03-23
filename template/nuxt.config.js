@@ -34,6 +34,29 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    extend(config) {
+      const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg)$/');
+      config.module.rules.splice(config.module.rules.indexOf(rule), 1);
+
+      // add it again, but now without 'assets\/svg'
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif|svg)$/,
+        loader: 'url-loader',
+        exclude: /(static\/img/icons)/,
+        query: {
+          limit: 1000, // 1KO
+          name: 'img/[name].[hash:7].[ext]',
+        },
+      });
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        include: /assets\/img/,
+        use: 'svg-sprite-loader',
+      });
+
+      
+    },
     vendor: [
       'vue-i18n',
       'v-click-outside',
@@ -57,5 +80,6 @@ module.exports = {
     { src: '~/plugins/vue-flickity.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~/plugins/click-outside.js', ssr: false },
+    { src: '~/plugins/svg-sprite-loader', ssr: false },
   ],
 }
