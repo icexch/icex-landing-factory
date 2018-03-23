@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/icexch/icex-landing-factory.git"
   },
+  "config": {
+    "nuxt": {
+      "port": "3333"
+    }
+  },
   "scripts": {
     "dev": "npm update icex-landing-uikit && nuxt",
     "build": "nuxt build",
