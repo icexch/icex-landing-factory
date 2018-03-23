@@ -18,7 +18,7 @@
         )
           small(v-html="data.name")
           .d-flex.align-items-end.align-content-end
-            small {{ data.price.value }} 
+            small(v-html="data.price.value")
             span.d-flex.align-items-end.align-content-end
               span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
               small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
