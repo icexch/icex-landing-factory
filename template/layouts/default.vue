@@ -95,5 +95,8 @@
 
 <style lang="sass">
 
+  .layout__container
+    overflow: hidden
+    width: 100%
 
 </style>
