@@ -34,6 +34,7 @@
     "vue-i18n": "^7.5.0",
     "vue-meta": "^1.4.3",
     "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.11.0",
     "vuebar": "0.0.18",
     "vuex": "^3.0.1"
   },
