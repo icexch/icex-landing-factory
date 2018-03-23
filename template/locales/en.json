@@ -15,5 +15,9 @@
 
   "social": {
     "title": "Follow us"
+  },
+
+  "footer": {
+    "writeToUs": "Write to us"
   }
 }

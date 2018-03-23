@@ -5,6 +5,8 @@
     :socials="socials"
   )
     template(slot="footerForm" @submit.prevent="validateForm")
+      .text-center
+        .text-white(v-html="$t('footer.writeToUs')")
       form.mb-2
         .form-group
           input(
@@ -64,18 +66,18 @@
           message: [],
         },
         footerData: {
-          bg: 'bg-white',
+          bg: '',
           logo: {
-            url: '/img/logo.svg',
+            url: '/img/logo_footer.svg',
           },
           form: {
-            class: 'bg-danger',
+            class: 'bg-primary',
           },
           email: 'info@icex.ch',
           copyright: '© 2017 ICEX | Holygate Investments',
           share: {
             // chage with $t('header.share')
-            color: 'secondary',
+            color: 'primary',
             title: this.$t('social.title'),
           },
         },
