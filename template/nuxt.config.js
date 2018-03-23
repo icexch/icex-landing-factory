@@ -42,7 +42,7 @@ module.exports = {
       config.module.rules.push({
         test: /\.(png|jpe?g|gif|svg)$/,
         loader: 'url-loader',
-        exclude: /(static\/img/icons)/,
+        exclude: /(static\/img\/icons)/,
         query: {
           limit: 1000, // 1KO
           name: 'img/[name].[hash:7].[ext]',
@@ -51,11 +51,9 @@ module.exports = {
 
       config.module.rules.push({
         test: /\.svg$/,
-        include: /assets\/img/,
+        include: /static\/img\/icons/,
         use: 'svg-sprite-loader',
       });
-
-      
     },
     vendor: [
       'vue-i18n',
