@@ -78,6 +78,6 @@ module.exports = {
     { src: '~/plugins/vue-flickity.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~/plugins/click-outside.js', ssr: false },
-    { src: '~/plugins/svg-sprite-loader', ssr: false },
+    { src: '~/plugins/svg-sprite-loader.js', ssr: false },
   ],
 }

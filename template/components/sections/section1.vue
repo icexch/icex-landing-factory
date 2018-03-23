@@ -23,7 +23,7 @@
                   small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
         .header__btns(slot="headerBtns")
-
+          ui-icon(:name="'logo'")
           a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
           a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
 
