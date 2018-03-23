@@ -66,7 +66,7 @@
           message: [],
         },
         footerData: {
-          bg: '',
+          class: 'bg-info',
           logo: {
             url: '/img/logo_footer.svg',
           },
