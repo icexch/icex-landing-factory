@@ -33,6 +33,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  router: {
+    middleware: ['i18n'],
+  },
   build: {
     extend(config) {
       const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg)$/');
@@ -54,6 +57,7 @@ module.exports = {
         include: /static\/img\/icons/,
         use: 'svg-sprite-loader',
       });
+
     },
     vendor: [
       'vue-i18n',

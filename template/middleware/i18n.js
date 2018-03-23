@@ -4,10 +4,12 @@ export default function ({
   if (isHMR) return;
   const locale = params.lang || 'en';
 
-  if (!(locale in store.state.common.locales)) {
+  if (!(locale in store.state.common.glossary.locales)) {
     // eslint-disable-next-line
     return error({ message: 'This page could not be found.', statusCode: 404 });
   }
+
+  console.log(locale);
 
   store.dispatch('common/setUserLocale', locale);
   app.i18n.locale = locale;
