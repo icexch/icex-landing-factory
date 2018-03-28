@@ -2,6 +2,8 @@
 
   div
     section1(:socials="socials")
+    .section__cotnainer--fullheight
+    .section__cotnainer--fullheight
     landing-footer(:socials="socials")
 
 

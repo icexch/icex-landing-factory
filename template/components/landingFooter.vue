@@ -3,6 +3,7 @@
   ui-footer(
     :footerData="footerData"
     :socials="socials"
+    :multiline="true"
   )
     template(slot="footerForm" @submit.prevent="validateForm")
       .text-center
