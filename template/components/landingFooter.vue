@@ -75,7 +75,7 @@
             class: 'bg-primary',
           },
           email: 'info@icex.ch',
-          copyright: '© 2017 ICEX | Holygate Investments',
+          copyright: `© ${(new Date()).getFullYear()} ICEX | Holygate Investments`,
           share: {
             // chage with $t('header.share')
             color: 'primary',
