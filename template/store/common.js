@@ -15,6 +15,7 @@ const state = () => ({
   locale: 'en',
   menuIsOpen: false,
   showLoader: true,
+  scrollDisabled: false,
   locales: {
     en: {
       full: 'English',

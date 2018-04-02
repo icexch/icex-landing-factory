@@ -9,7 +9,7 @@ const localStorageKeys = {
 };
 
 function checkActiveCoins() {
-  const coinsExist = ls.get('selectedCoins');
+  const coinsExist = ls.getItem('selectedCoins');
   return coinsExist ? coinsExist.split(',') : [];
 }
 
@@ -45,7 +45,7 @@ const ADD_FILTER = 'COINS/ADD_FILTER';
 const REMOVE_FILTER = 'COINS/REMOVE_FILTER';
 
 const getters = {
-  sortCriteria: state => locStor.get('sortCriteria') || state.sorting,
+  sortCriteria: state => ls.getItem('sortCriteria') || state.sorting,
 };
 
 const actions = {
@@ -153,7 +153,7 @@ const actions = {
   },
 
   setCoinsSorting({ commit }, str) {
-    locStor.set('sortCriteria', str);
+    ls.setItem('sortCriteria', str);
     commit(SET_SORTING, str);
   },
 
@@ -187,7 +187,7 @@ const actions = {
 
   resetActiveCoins({ commit }) {
     commit(RESET_ACTIVE_COIN);
-    locStor.set('selectedCoins', '');
+    ls.setItem('selectedCoins', '');
   },
 
   toggleActiveCoin({ commit }, name) {
@@ -196,14 +196,14 @@ const actions = {
 
     if (index === -1) {
       coins.push(name);
-      locStor.set('selectedCoins', coins.toString());
+      ls.setItem('selectedCoins', coins.toString());
 
       commit(ADD_ACTIVE_COIN, name);
       return { result: 'added', name, index };
     }
 
     coins.splice(index, 1);
-    locStor.set('selectedCoins', coins.toString());
+    ls.setItem('selectedCoins', coins.toString());
 
     commit(REMOVE_ACTIVE_COIN, index);
     return { result: 'removed', name, index };
@@ -215,7 +215,7 @@ const actions = {
 
     if (index === -1) {
       coins.push(name);
-      locStor.set('selectedCoins', coins.toString());
+      ls.setItem('selectedCoins', coins.toString());
 
       commit(ADD_ACTIVE_COIN, name);
       return { result: 'added', name, index };
