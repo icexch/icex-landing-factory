@@ -5,9 +5,12 @@
     :socials="socials"
     :multiline="true"
   )
+    template(slot="footerLogo")
+      ui-icon(:name="'logo'")
+
     template(slot="footerForm" @submit.prevent="validateForm")
       .text-center
-        .text-white(v-html="$t('footer.writeToUs')")
+        .h4.text-white(v-html="$t('footer.writeToUs')")
       form.mb-2
         .form-group
           input(

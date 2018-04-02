@@ -79,14 +79,15 @@
           share: {
             // chage with $t('header.share')
             class: 'white',
-            title: 'Follow us',
+            title: this.$t('social.title'),
           },
           menu: [
-            'Menu item 1',
-            'Menu item 2',
-            'Menu item 3',
-            'Menu item 4',
-            'Menu item 5',
+            this.$t('section2.label'),
+            this.$t('section3.label'),
+            this.$t('section4.label'),
+            this.$t('section5.label'),
+            this.$t('section6.label'),
+            this.$t('section7.label'),
           ]
         }
       },
