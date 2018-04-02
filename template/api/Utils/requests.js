@@ -3,6 +3,7 @@ import axios from 'axios';
 import https from 'https';
 import get from 'lodash.get';
 import qs from 'qs';
+import Raven from 'raven-js';
 import common from '~/store/common';
 import notifications from '~/store/notifications';
 
@@ -30,6 +31,8 @@ function _request(method, baseURL, endpoint, parameters) {
 
   return instance(opt)
     .catch((e) => {
+      Raven.captureException(e);
+      const errors = get(e, 'response.data.error', {});
       /* eslint-disable no-console */
       if (e.response) {
         console.log(`
@@ -40,7 +43,6 @@ function _request(method, baseURL, endpoint, parameters) {
         `);
 
         const stateNotif = notifications.state;
-        const errors = get(e, 'response.data.error', {});
 
         Object.values(errors).forEach((el) => {
           notifications.mutations.ADD(stateNotif, {
@@ -52,7 +54,7 @@ function _request(method, baseURL, endpoint, parameters) {
         });
       }
       /* eslint-enable no-console */
-      return { data: { result: false, data: null } };
+      return { data: { result: false, data: null, msg: errors } };
     });
 }
 

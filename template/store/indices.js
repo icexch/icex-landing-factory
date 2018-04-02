@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import Vue from 'vue';
-import locStor from '~/helpers/locStor';
+import ls from '~/helpers/localStorage';
 import { index, namedIndex, userIndex } from '../api';
 
 const localStorageKeys = {
@@ -8,7 +8,7 @@ const localStorageKeys = {
 };
 
 function checkActiveIndices() {
-  const existIndices = locStor.get('selectedIndices');
+  const existIndices = ls.getItem('selectedIndices');
   return existIndices ? existIndices.split(',') : [];
 }
 
@@ -96,7 +96,7 @@ const actions = {
 
   resetActiveIndices({ commit }) {
     commit(RESET_ACTIVE_INDICES);
-    locStor.set('selectedIndices', '');
+    ls.setItem('selectedIndices', '');
   },
 
   toggleActiveIndex({ commit, state }, name) {
@@ -105,14 +105,14 @@ const actions = {
 
     if (index === -1) {
       indices.push(name);
-      locStor.set('selectedIndices', indices.toString());
+      ls.setItem('selectedIndices', indices.toString());
 
       commit(ADD_ACTIVE_INDEX, name);
       return { result: 'added', name, index };
     }
 
     indices.splice(index, 1);
-    locStor.set('selectedIndices', indices.toString());
+    ls.setItem('selectedIndices', indices.toString());
 
     commit(REMOVE_ACTIVE_INDEX, index);
     return { result: 'removed', name, index };
@@ -124,7 +124,7 @@ const actions = {
 
     if (index === -1) {
       indices.push(name);
-      locStor.set('selectedIndices', indices.toString());
+      ls.setItem('selectedIndices', indices.toString());
 
       commit(ADD_ACTIVE_INDEX, name);
       return { result: 'added', name, index };

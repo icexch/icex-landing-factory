@@ -1,6 +1,6 @@
 <template lang="pug">
 
-  div.layout__container
+  div.layout__container(:class="{'layout__container--unscroll': scrollDisabled, 'layout__container--unscroll-mobile': scrollDisabled && isMobile}")
     nuxt
 
 </template>
@@ -83,6 +83,8 @@
     computed: {
       ...mapState({
         locale: state => state.common.locale,
+        isMobile: state => state.common.isMobile,
+        scrollDisabled : state => state.common.scrollDisabled,
       }),
     },
 
@@ -94,9 +96,16 @@
 </script>
 
 <style lang="sass">
-
   .layout__container
     overflow: hidden
     width: 100%
+
+  .layout__container--unscroll
+    height: 100vh
+
+  .layout__container--unscroll-mobile
+    position: fixed
+    left: 0
+    top: 0
 
 </style>

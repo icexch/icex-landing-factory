@@ -68,9 +68,6 @@
         },
         footerData: {
           class: 'bg-info',
-          logo: {
-            url: '/img/logo_footer.svg',
-          },
           form: {
             class: 'bg-primary',
           },

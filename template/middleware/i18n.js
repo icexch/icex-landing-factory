@@ -4,7 +4,7 @@ export default function ({
   if (isHMR) return;
   const locale = params.lang || 'en';
 
-  if (!(locale in store.state.common.glossary.locales)) {
+  if (!(locale in store.state.common.locales)) {
     // eslint-disable-next-line
     return error({ message: 'This page could not be found.', statusCode: 404 });
   }

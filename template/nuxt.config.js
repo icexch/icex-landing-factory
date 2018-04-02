@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'icex-landing-factory',
+    title: 'ICEX wallet',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -37,7 +37,8 @@ module.exports = {
     middleware: ['i18n'],
   },
   build: {
-    extend(config) {
+
+    extend(config, { isServer }) {
       const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg)$/');
       config.module.rules.splice(config.module.rules.indexOf(rule), 1);
 
@@ -58,15 +59,6 @@ module.exports = {
         use: 'svg-sprite-loader',
       });
 
-    },
-    vendor: [
-      'vue-i18n',
-      'v-click-outside',
-      'vue-flickity',
-      'vue-scrollto',
-    ],
-
-    extend (config, { isServer }) {
       if (isServer) {
         config.externals = [
           nodeExternals({
@@ -74,12 +66,21 @@ module.exports = {
           })
         ]
       }
+
     },
+
+    vendor: [
+      'vue-i18n',
+      'v-click-outside',
+      'vue-flickity',
+      'vue-scrollto',
+    ],
   },
   plugins: [
     { src: '~/plugins/i18n.js', ssr: true },
     { src: '~/plugins/ui-kit.js', ssr: true },
     { src: '~/plugins/vue-flickity.js', ssr: false },
+    { src: '~/plugins/localStorage.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~/plugins/click-outside.js', ssr: false },
     { src: '~/plugins/svg-sprite-loader.js', ssr: false },

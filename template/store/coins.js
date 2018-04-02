@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 import Vue from 'vue'; // eslint-disable-line
 import get from 'lodash.get';
-import locStor from '~/helpers/locStor';
+import ls from '~/helpers/localStorage';
 import { coins, coin } from '../api';
 
 const localStorageKeys = {
@@ -9,7 +9,7 @@ const localStorageKeys = {
 };
 
 function checkActiveCoins() {
-  const coinsExist = locStor.get('selectedCoins');
+  const coinsExist = ls.get('selectedCoins');
   return coinsExist ? coinsExist.split(',') : [];
 }
 

@@ -1,17 +1,52 @@
-$font-family-base: 'Montserrat'
-$primary: #021032
-$secondary: #0b50cd
-$info: #e7e9f1
-// example of changing header burger bg
-// $header-burger-bg: red
+$font-family-base: 'Montserrat', sans-serif
 
-// 
-// here redeclare base colors and sizes
-// 
+$primary: #323d59
+$secondary: #0b53d3
+
+// for section desc color
+$info: #e7e9f1
+
+// for red text in sections
+$danger: #f23c14
+
+$header-sticked-mobile-bg: $secondary
+$header-locale-bg: $primary
+$header-locale-bg-active: $danger
+
+$header-burger-default: white
+
+$header-content-bg: $secondary
+$header-menu-bg-mobile: $secondary
+$header-logo: $secondary
 
 $slider-btn-color: white
+
+// footer
+$input-border-color: white
+$input-text-color: white
+
+
+@import './header.sass'
 
 @import "~bootstrap/scss/bootstrap.scss";
 
 // base styles of all icex-landing-uikit components
 @import "~icex-landing-uikit/index.sass";
+
+@import "~bootstrap/scss/buttons";
+
+html
+  @include media-breakpoint-down(md)
+    font-size: 15px
+
+  @include media-breakpoint-down(sm)
+    font-size: 14px
+
+  @include media-breakpoint-down(sm)
+    font-size: 13px
+
+.currency__name
+  &:first-letter
+    text-transform: uppercase
+
+@import './icons.sass'

@@ -6,6 +6,10 @@
         :headerData="headerData"
         :socials="socials"
       )
+        template(slot="headerLogo")
+          ui-icon(:name="'logo'" v-if="menuIsOpen").icon--white
+          ui-icon(:name="'logo'" v-else)
+
         template(slot="headerContent")
           ui-slider(
             v-if="showSlider"
@@ -23,7 +27,6 @@
                   small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
         .header__btns(slot="headerBtns")
-          ui-icon(:name="'logo'")
           a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
           a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
 
@@ -96,6 +99,7 @@
         sliderData: state => state.coins.data,
         currency: state => state.common.currency,
         locale: state => state.common.locale,
+        menuIsOpen: state => state.common.menuIsOpen,
       }),
 
       appLink() {
