@@ -9,8 +9,6 @@ export default function ({
     return error({ message: 'This page could not be found.', statusCode: 404 });
   }
 
-  console.log(locale);
-
   store.dispatch('common/setUserLocale', locale);
   app.i18n.locale = locale;
 
