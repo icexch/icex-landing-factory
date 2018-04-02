@@ -17,6 +17,78 @@
     "title": "Подпишитесь"
   },
 
+  "section1": {
+    "title": "Your own <span class=\"text-danger\">Bank</span><br>in secure global<br>sistem",
+    "desc": "The word's first decentralized<br>multicurrency cryptowallet"
+  },
+
+  "section2": {
+    "label": "О кошельке",
+    "title": "Your own <span class=\"text-danger\">Bank</span><br>in secure global<br>sistem",
+    "desc": "The word's first decentralized<br>multicurrency cryptowallet"
+  },
+
+  "section3": {
+    "label": "Мультивалютность",
+    "title": "We’ve looked <br>through current<br>multicurrency",
+    "desc": "В данный момент мы обеспечиваем прием, хранение и отправку следующих криптовалют",
+    "coins": {
+      "desc": "В дальнейшем количество монет будет увеличиваться."
+    }
+  },
+
+  "section4": {
+    "label": "Функциональность",
+    "feature": {
+      "access": {
+        "title": "Доступ",
+        "desc": "Мы не имеем доступа к вашим средствам, что обеспечивает полную безопасность их хранения и использования"
+      },
+      "anonimous": {
+        "title": "Анонимность",
+        "desc": "We will never access any of your personal information and Trust always keeps your data private and secure"
+      },
+      "decentralized": {
+        "title": "Децентрализованность",
+        "desc": "При регистрации кошелька вы получаете приватный ключ, что позволяет восстановить доступ ко всем монетам, назависимо от того функционирует нашсервис или нет"
+      },
+      "secure": {
+        "title": "Безопастность",
+        "desc": "Your private key only stored locally and protected with many layers of security"
+      }
+    }
+  },
+
+  "section5": {
+    "label": "Умный кошелек",
+    "title": "Main brain<br>get first to<br>Smart Wallet",
+    "desc": "С помощью разработанных нами смартконтрактов пользователи могут без проблем обменивать свои активы как с другими нашими пользователями, так и с клиентами сторонних сервисов, подключенных к нашему кошельку."
+  },
+
+  "section6": {
+    "label": "Технологичный",
+    "title": "Our wallet app makes it easy for you to trade currencies and cryptocurrencies, with complete support for margin trading",
+    "desc": "The new generation of online wallet"
+  },
+
+  "section7": {
+    "label": "О компании",
+    "slider": [
+      {
+        "title": "Holygate Investments - компания, которая занимается развитием IT проектов преимущественно в&nbsp;финансово-криптовалютной сфере",
+        "desc": "Основана в&nbsp;2017,  это ваш путь в&nbsp;мир цифровых активов"
+      },
+      {
+        "title": " Оперируя на&nbsp;рынке криптовалют с&nbsp;самого его становления, мы собрали вокруг себя ядро из&nbsp;высококвалифицированных специалистов в&nbsp;сфере финансов, безопасности, разработки и&nbsp;маркетинга",
+        "desc": "Опытные менторы, талантливые разработчики и&nbsp;гуру маркетинга - мы упростим операции с&nbsp;вашими цифровыми активами"
+      },
+      {
+        "title": "Целью компании является разработка наиболее востребованных и&nbsp;перспективных продуктов для&nbsp;операций на&nbsp;быстрорастущем рынке цифровых активов",
+        "desc": "Среди продуктов компании планируются к&nbsp;запуску новые инструменты для&nbsp;аналитики рынка, цифровые валютные кошельки и&nbsp;платформа, где покупатели и&nbsp;продавцы смогут осуществлять операции с&nbsp;цифровыми валютами"
+      }
+    ]
+  },
+
   "footer": {
     "writeToUs": "Напишите нам"
   }

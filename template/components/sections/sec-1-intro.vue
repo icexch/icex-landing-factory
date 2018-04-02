@@ -75,9 +75,7 @@
       headerData() {
         return {
           locale: this.localeData,
-          logo: {
-            url: '/img/logo.svg',
-          },
+          label: 'Test',
           share: {
             // chage with $t('header.share')
             class: 'white',

@@ -1,16 +1,16 @@
 <template lang="pug">
 
   div
-    section1(:socials="socials")
-    .section__cotnainer--fullheight
-    .section__cotnainer--fullheight
+    sec1(:socials="socials")
+    sec2
     landing-footer(:socials="socials")
 
 
 </template>
 
 <script>
-  import section1 from '~/components/sections/section1.vue'
+  import sec1 from '~/components/sections/sec-1-intro.vue'
+  import sec2 from '~/components/sections/sec-2-about.vue'
   import landingFooter from '~/components/landingFooter.vue'
 
   import { mapState, mapGetters } from 'vuex';
@@ -48,7 +48,8 @@
     methods: {
     },
     components: {
-      section1,
+      sec1,
+      sec2,
       landingFooter,
     },
     computed: {
