@@ -14,7 +14,6 @@ function ls() {
   };
   /**
    * Error object return if localStorage is unavailable
-   * @returns {{result: boolean, data: null, message: string}}
    */
   const error = {
     result: false,
@@ -24,7 +23,6 @@ function ls() {
 
   /**
    * localStorage key where to store all settings
-   * @returns {string}
    */
   const rootKey = 'icex';
   let settings = {};
