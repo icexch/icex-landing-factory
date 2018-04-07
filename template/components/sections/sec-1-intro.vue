@@ -30,6 +30,7 @@
           a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
           a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
 
+      .scrolldown(v-scroll-to="'#about_wallet'")
 
 </template>
 
@@ -52,8 +53,13 @@
         flickityOptions: {
           cellAlign: 'left',
           wrapAround: true,
-          prevNextButtons: true,
+          prevNextButtons: false,
           pageDots: false,
+          freeScroll: true,
+          selectedAttraction: 0.001,
+          // freeScrollFriction: 0.03,
+          friction: 1,
+          autoPlay: 4000,
         },
 
         sectionData: {

@@ -28,7 +28,7 @@
     "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "bootstrap": "^4.0.0",
-    "icex-landing-uikit": "^0.2.97",
+    "icex-landing-uikit": "^0.2.98",
     "lodash.get": "^4.4.2",
     "mobile-detect": "^1.4.1",
     "node-sass": "^4.7.2",
