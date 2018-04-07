@@ -19,7 +19,7 @@
               slot="sliderContent"
               v-for="data in sliderData"
             )
-              small(v-html="data.name")
+              .small.currency__name(v-html="data.name")
               .d-flex.align-items-end.align-content-end
                 small(v-html="data.price.value")
                 span.d-flex.align-items-end.align-content-end
