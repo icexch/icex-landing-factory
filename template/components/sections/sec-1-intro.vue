@@ -31,6 +31,7 @@
           a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
 
       .scrolldown(v-scroll-to="'#about_wallet'")
+      .scroller(:style="{ 'visibility' : stickNav ? 'visible' : 'hidden' }", @click="scrollToTop()")
 
 </template>
 
@@ -49,6 +50,7 @@
     data() {
       return {
         showSlider: false,
+        stickNav: false,
 
         flickityOptions: {
           cellAlign: 'left',
@@ -57,7 +59,7 @@
           pageDots: false,
           freeScroll: true,
           selectedAttraction: 0.001,
-          // freeScrollFriction: 0.03,
+          freeScrollFriction: 1,
           friction: 1,
           autoPlay: 4000,
         },
@@ -76,7 +78,13 @@
     },
     components: {},
     watch: {},
-    methods: {},
+    methods: {
+      checkNavSticking () {
+        if (process.browser) {
+          this.stickNav = window.scrollY > window.innerHeight;
+        }
+      },
+    },
     computed: {
       headerData() {
         return {
@@ -113,7 +121,11 @@
     },
     fetch() {},
     beforeCreate() {},
-    created() {},
+    created () {
+      if (process.browser) {
+        window.addEventListener('scroll', this.checkNavSticking);
+      }
+    },
     beforeMount() {},
     mounted() {
       const params = {
@@ -130,7 +142,11 @@
     activated() {},
     deactivated() {},
     beforeDestroy() {},
-    destroyed() {},
+    destroyed () {
+      if (process.browser) {
+        window.removeEventListener('scroll', this.checkNavSticking);
+      }
+    },
     errorCaptured() {},
   };
 </script>
