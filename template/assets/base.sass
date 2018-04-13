@@ -28,8 +28,6 @@ $input-text-color: white
 // base styles of all icex-landing-uikit components
 @import "~icex-landing-uikit/index.sass";
 
-@import "~bootstrap/scss/buttons";
-
 html
   @include media-breakpoint-down(md)
     font-size: 15px
@@ -41,8 +39,7 @@ html
     font-size: 13px
 
 .currency__name
-  &:first-letter
-    text-transform: uppercase
+  text-transform: uppercase
 
 @import './icons.sass'
 @import './scroller.sass'
