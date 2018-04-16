@@ -48,7 +48,9 @@
       return {
         showSlider: false,
         stickNav: false,
-
+        /**
+         * Slider options
+         */
         flickityOptions: {
           cellAlign: 'left',
           wrapAround: true,
@@ -76,6 +78,9 @@
     components: {},
     watch: {},
     methods: {
+      /**
+       * Check if user scrolled more then 100vh
+       */
       checkNavSticking () {
         if (process.browser) {
           this.stickNav = window.scrollY > window.innerHeight;
@@ -92,9 +97,17 @@
             class: 'white',
             title: this.$t('social.title'),
           },
+          /**
+           * Every time start from 2. 
+           * !!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!
+           * If section is hidden add instead of it label empty string ''
+           * @type {Array}
+           */
           menu: [
             this.$t('section2.label'),
             this.$t('section3.label'),
+            //  For eample:
+            '',
             this.$t('section4.label'),
             this.$t('section5.label'),
             this.$t('section6.label'),
@@ -112,9 +125,6 @@
         menuIsOpen: state => state.common.menuIsOpen,
       }),
 
-      appLink() {
-        return `https://app.icex.ch/${this.locale.active}/auth`
-      },
     },
     fetch() {},
     beforeCreate() {},

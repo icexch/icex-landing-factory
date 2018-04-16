@@ -26,9 +26,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  css: [
-    { src: 'node_modules/bootstrap/scss/bootstrap.scss', lang: 'sass' },
-  ],
+  css: [],
   loading: { color: '#3B8070' },
   /*
   ** Build configuration
@@ -52,13 +50,17 @@ module.exports = {
           name: 'img/[name].[hash:7].[ext]',
         },
       });
-
+      /**
+       * For uploading sprite icons
+       */
       config.module.rules.push({
         test: /\.svg$/,
         include: /static\/img\/icons/,
         use: 'svg-sprite-loader',
       });
-
+      /**
+       * For adding icex-landing-uikit to whitelist
+       */
       if (isServer) {
         config.externals = [
           nodeExternals({
@@ -66,14 +68,13 @@ module.exports = {
           })
         ]
       }
-
     },
 
     vendor: [
       'vue-i18n',
-      'v-click-outside',
       'vue-flickity',
       'vue-scrollto',
+      'v-click-outside',
     ],
   },
   plugins: [

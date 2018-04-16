@@ -87,6 +87,10 @@
     components: {},
     watch: {},
     methods: {
+      /**
+       * Validate form call after enter presing or click to send btn
+       * @return {[type]} [description]
+       */
       validateForm() {
         Object.keys(this.form).forEach((field) => {
           const err = this.errors[field];
@@ -110,12 +114,19 @@
           this.sendForm();
         })
       },
+      /**
+       * Validate user name for lenth
+       * @param  {String} User name
+       */
       validateName(name) {
         if (name.length < 3) {
           this.errors.name.push('short');
         }
       },
-
+      /**
+       * Email validation
+       * @param  {String} User email
+       */
       validateEmail(email) {
         const re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
 
@@ -124,15 +135,21 @@
         }
       },
 
+      /**
+       * Send validate form
+       */
       sendForm() {
         _post(this.baseUrl, 'landing/contact', this.form)
           .then((data) => {
             if (data.data.result) {
-              this.form = {}
+              this.form = {};
             }
           });
       },
-
+      /**
+       * Clear errors before each validation
+       * @param  {String} Field name
+       */
       clearErrors(field) {
         this.errors[field] = [];
       },
