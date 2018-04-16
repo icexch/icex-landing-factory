@@ -79,6 +79,6 @@
 
 <style lang="sass">
 
-  @import '~assets/base.sass'
+  @import '~assets/sass/base.sass'
 
 </style>
