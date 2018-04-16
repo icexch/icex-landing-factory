@@ -1,5 +1,6 @@
 $font-family-base: 'Montserrat', sans-serif
 
+//Reinit bootstrap default colors
 $primary: #323d59
 $secondary: #0b53d3
 
@@ -15,11 +16,9 @@ $header-label-bg: $secondary
 $slider-btn-color: white
 $footer-logo: $primary
 
-
 // footer
 $input-border-color: white
 $input-text-color: white
-
 
 @import './header.sass'
 
@@ -27,6 +26,10 @@ $input-text-color: white
 
 // base styles of all icex-landing-uikit components
 @import "~icex-landing-uikit/index.sass";
+
+// Reinit bootstrap btn
+.btn
+  @include button-size(.4rem, 1.6rem, $font-size-base, $btn-line-height, 1.5rem)
 
 html
   @include media-breakpoint-down(md)

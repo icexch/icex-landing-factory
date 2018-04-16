@@ -15,7 +15,7 @@
             v-if="showSlider"
             :flickityOptions="flickityOptions"
           )
-            .currency__slide(
+            .currency__slide.pl-3(
               slot="sliderContent"
               v-for="data in sliderData"
             )
@@ -26,9 +26,6 @@
                   span.currency__status(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' ")
                   small(:class=" data.change.day.indexOf('-') !== -1 ?  'down': 'up' " v-html="data.change.day")
 
-        .header__btns(slot="headerBtns")
-          a(:href="`${appLink}/signin`" v-html="$t('btn.signin')").btn.btn-link
-          a(:href="`${appLink}/signup`" v-html="$t('btn.signup')").btn.btn-primary-outline
 
       .scrolldown(v-scroll-to="'#about_wallet'")
       .scroller(:style="{ 'visibility' : stickNav ? 'visible' : 'hidden' }", @click="scrollToTop()")
@@ -70,7 +67,7 @@
             classes: ['text-warning', 'h4'],
           },
           container: {
-            classes: ['bg-info', 'section__cotnainer--fullheight'],
+            classes: ['bg-info', 'section__container--fullheight'],
           },
           id: '1',
         },

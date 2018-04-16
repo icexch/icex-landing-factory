@@ -1,10 +1,8 @@
 <template lang="pug">
-
   div
     sec1(:socials="socials")
     sec2
     landing-footer(:socials="socials")
-
 
 </template>
 
@@ -44,9 +42,10 @@
         ],
       };
     },
+
     watch: {},
-    methods: {
-    },
+
+    methods: {},
     components: {
       sec1,
       sec2,
