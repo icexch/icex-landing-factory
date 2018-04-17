@@ -44,7 +44,7 @@ module.exports = {
       config.module.rules.push({
         test: /\.(png|jpe?g|gif|svg)$/,
         loader: 'url-loader',
-        exclude: /(static\/img\/icons)/,
+        exclude: /(assets\/img\/icons)/,
         query: {
           limit: 1000, // 1KO
           name: 'img/[name].[hash:7].[ext]',
@@ -55,7 +55,7 @@ module.exports = {
        */
       config.module.rules.push({
         test: /\.svg$/,
-        include: /static\/img\/icons/,
+        include: /assets\/img\/icons/,
         use: 'svg-sprite-loader',
       });
       /**
