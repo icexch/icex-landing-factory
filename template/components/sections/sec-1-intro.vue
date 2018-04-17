@@ -6,7 +6,11 @@
         :headerData="headerData"
         :socials="socials"
       )
-        template(slot="headerLogo")
+        template(slot="headerLogoDesktop")
+          ui-icon(:name="'logo'" v-if="menuIsOpen").icon--white
+          ui-icon(:name="'logo'" v-else)
+
+        template(slot="headerLogoMobile")
           ui-icon(:name="'logo'" v-if="menuIsOpen").icon--white
           ui-icon(:name="'logo'" v-else)
 

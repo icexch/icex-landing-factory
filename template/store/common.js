@@ -51,7 +51,7 @@ const actions = {
   setUserDefaultParams({ commit, state }) {
     const md = new MobileDetect(window.navigator.userAgent);
     const initialUserParams = {
-      menuIsOpen: ls.getItem('menuIsOpen').data || state.menuIsOpen,
+      menuIsOpen: state.menuIsOpen,
       isMobile: (!!md.phone() || !!md.tablet()),
       locale: state.locale || ls.getItem('locale')
       || window.navigator.language.split('-')[0]
@@ -89,7 +89,6 @@ const mutations = {
   },
   [SET_USER_MENU_STATUS](state, status) {
     state.menuIsOpen = status;
-    ls.setItem('menuIsOpen', status);
   },
   [SET_LOADER_STATUS](state, status) {
     state.showLoader = status;
