@@ -8,7 +8,6 @@ export default function ({
    */
   let locale = params.lang || 'en';
 
-  console.log(locale);
   /**
    * Validate locale
    * @param  {String} [check locale in locales Object]
@@ -23,15 +22,16 @@ export default function ({
    * Check if korean locale
    * @type {Boolean}
    */
+
   const hasKo = route.fullPath.indexOf('ko');
   /**
    * If it is Korean locale redirect to English 
    * @param  {Boolean} 
    * @return {Event} redirect to new path
    */
-  if (hasKo) {
+  if (hasKo !== -1) {
     locale = 'en';
-    const newPath = route.fullPath.replace('ko/', 'en/');
+    const newPath = route.fullPath.replace('ko', 'en');
     redirect(newPath);
   }
 
@@ -41,6 +41,9 @@ export default function ({
   store.dispatch('common/setUserLocale', locale);
   app.i18n.locale = locale;
 
+  /**
+   * Redirect from root
+   */
   if (route.fullPath === '/') {
     redirect(`/${locale}`);
   }
