@@ -65,7 +65,7 @@
 
     data() {
       return {
-        host: 'https://app.icex.ch',
+        host: '',
       };
     },
 
