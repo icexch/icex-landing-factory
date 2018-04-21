@@ -27,11 +27,11 @@ const state = () => ({
       short: 'Rus',
       desc: 'rus',
     },
-    ko: {
-      full: '한국어',
-      short: '한',
-      desc: 'kor',
-    },
+    // ko: {
+    //   full: '한국어',
+    //   short: '한',
+    //   desc: 'kor',
+    // },
   },
 });
 

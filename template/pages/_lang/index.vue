@@ -12,6 +12,7 @@
   import landingFooter from '~/components/landingFooter.vue'
 
   import { mapState, mapGetters } from 'vuex';
+
   export default {
     name: 'home_page',
     mixins: [],

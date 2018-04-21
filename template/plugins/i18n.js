@@ -15,13 +15,4 @@ export default ({ app, store }) => {
       ko: require('~/locales/ko.json'),
     },
   });
-
-  app.i18n.path = (link) => {
-    return `/${app.i18n.locale}/${link}`;
-  };
-
-  app.i18n.translate = (loc, link) => {
-    const path = link.substr(3);
-    return `/${loc}${path}`;
-  };
 };
