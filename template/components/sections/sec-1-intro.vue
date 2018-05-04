@@ -103,19 +103,33 @@
           },
           /**
            * Every time start from 2. 
-           * !!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!
-           * If section is hidden add instead of it label empty string ''
            * @type {Array}
            */
           menu: [
-            this.$t('section2.label'),
-            this.$t('section3.label'),
-            //  For eample:
-            '',
-            this.$t('section4.label'),
-            this.$t('section5.label'),
-            this.$t('section6.label'),
-            this.$t('section7.label'),
+            {
+              label: this.$t('section2.label'),
+              index: 2,
+            },
+            {
+              label: this.$t('section3.label'),
+              index: 3,
+            },
+            {
+              label: this.$t('section4.label'),
+              index: 4,
+            },
+            {
+              label: this.$t('section5.label'),
+              index: 5,
+            },
+            {
+              label: this.$t('section6.label'),
+              index: 6,
+            },
+            {
+              label: this.$t('section7.label'),
+              index: 7,
+            },
           ]
         }
       },
